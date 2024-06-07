@@ -32,14 +32,14 @@ class Customer:
             string_content=json.dumps([New_Customer])
             file_in_writing_mode.write(string_content)
             file_in_writing_mode.close()
-    
+
 # 2) Search Customer
     def Search_Customer(self,Search_c):
         file_in_read_mode=open("Data.json","r")
         file_content=file_in_read_mode.read()
         Customers=json.loads(file_content)
         for customer in Customers:
-            if customer["Customer_Name"].upper()==Search_c.upper():
+            if customer["Customer_Name"].upper()==Search_c.upper() or customer["Customer_Account_No"]==Search_c:
                 return customer
         return (" Customer not found.")
 

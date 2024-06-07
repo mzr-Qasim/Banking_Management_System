@@ -41,7 +41,7 @@ class Customer:
         for customer in Customers:
             if customer["Customer_Name"].upper()==Search_c.upper():
                 return customer
-        return ("Customer not found.")
+        return (" Customer not found.")
 
 # 3) Delete Customer
     def Delete_Customer(self,User_Identification):
@@ -56,7 +56,7 @@ class Customer:
            file_in_write_mode = open('Data.json', 'w')
            file_in_write_mode.write(json.dumps(customers))
            file_in_write_mode.close()
-           print('Customer has been deleted')
+           print(' Customer has been deleted')
 
 
 
@@ -79,7 +79,7 @@ class Customer:
             file_wu = open('Data.json' , 'w')
             file_wu.write(json.dumps(info))
             file_wu.close()
-        print("Account Updated successfully.")
+        print(" Account Updated successfully.")
 
             
 
